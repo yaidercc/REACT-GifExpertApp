@@ -7,3 +7,5 @@ Hooks were used like:
     - useState
     
     - useEffect
+    
+    - Custom hooks
