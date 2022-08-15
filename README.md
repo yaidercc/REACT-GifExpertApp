@@ -4,5 +4,6 @@ Application made in the React Js course in which we consume resources from the G
 
 Hooks were used like:
     
-    useState
-    useEffect
+    - useState
+    
+    - useEffect
