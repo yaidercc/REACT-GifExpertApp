@@ -14,8 +14,8 @@ export const AddCategory=({onNewCategory})=>{
         event.preventDefault();
         const newInputValue=inputValue.categoria.trim();
         if(newInputValue.length<=1) return;
-        setInputValue({categoria:"",cantidad:10});
         onNewCategory(newInputValue,inputValue.cantidad);
+        setInputValue({categoria:"",cantidad:10});
     }
     /**
      * OBSERVACIONES:

@@ -2,17 +2,17 @@ import { useState } from "react";
 import { AddCategory,GifGrid } from "./components";
 
 export const GifExpertApp=()=>{
-    const [categories,setCategories]=useState([{name:'Luffy',cantidad:10}]);
+    const [categories,setCategories]=useState([{name:'Jupiter',cantidad:10}]);
 
     const onAddCategory=(newCategory,cantidad)=>{
-
         // Primera letra en mayuscula
         newCategory=firstCapitalize(newCategory);
+
         // Valida que no este en la lista
         if(categories.filter(item=>item.name==newCategory).length>0) return;
         
         // Lo guarda en la lista en caso de que no esté
-        setCategories([{name:newCategory,cantidad},...categories]);
+        setCategories([{name:newCategory,cantidad:cantidad},...categories]);
         console.log(categories);
     }
 
@@ -28,7 +28,7 @@ export const GifExpertApp=()=>{
             <div className="header">
                 <h1>GifExpertApp</h1>
                 <AddCategory 
-                    onNewCategory={(value)=>onAddCategory(value)}
+                    onNewCategory={(category,cantidad)=>onAddCategory(category,cantidad)}
                 />
             </div>
             {categories.map((category)=>{
